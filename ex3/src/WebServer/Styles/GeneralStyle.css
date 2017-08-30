@@ -1,0 +1,64 @@
+﻿body {
+    background-image: url("../images/background maze.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form {
+    color: white;
+}
+input {
+    margin-bottom: 10px;
+    width: 200px;
+    color:black;
+}
+button {
+    background: none;
+    border: none;
+    color: blue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+h1 {
+    color: white;
+    vertical-align: central;
+    font-size: 50px;
+}
+h2 {
+    color: white;
+    vertical-align: central;
+}
+select {
+    color:black;
+    text-align: left;
+    margin-bottom: 10px;
+    width: 100px;
+}
+button:active {
+    transform: translateY(4px);
+}
+table{
+    font-weight:bold;
+}
+th,td {
+    text-align:center;
+    border: 1px solid white;
+    color: white;
+    margin-left: 50px;
+}
+.blueButton{
+    background: none;
+    border: none;
+    color: blue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.Navigation{
+    width:100%;
+}
+.submitButton{
+    color:black;
+}

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>User Ranking</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+    <link href="../Styles/GeneralStyle.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/myScripts/LoadNav.js"></script>
+</head>
+<body>
+    <div id="Navigation" class="Navigation"></div>
+    <div align = "center">
+        <h1> Users Ranking </h1>
+        <table style="width:50%">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>wins</th>
+                    <th>losses</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: Ranks">
+                <tr>
+                    <td><span data-bind="text: Rank"></span></td>
+                    <td><span style="color:aqua" data-bind="text: Id"></span> <br /> player since: <span data-bind="text: JoinDate"></span></td>
+                    <td><span data-bind="text: GamesWon"></span></td>
+                    <td><span data-bind="text: GamesLost"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="../Scripts/myScripts/RankingScrips.js"></script>
+</body>
+</html>

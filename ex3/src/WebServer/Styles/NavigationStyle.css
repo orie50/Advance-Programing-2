@@ -1,0 +1,29 @@
+﻿li {
+    background-color: black;
+    display: inline;
+}
+nav {
+    background-color: black;
+    color: gray;
+}
+a {
+    margin: 0px 0px 0px 20px;
+    color: gray;
+    padding: 20px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+.navbar-right{
+    margin: 0px 0px 0px 0px;
+}
+a:active {
+    transform: translateY(4px);
+}
+.navbar{
+    background-color:black;
+}

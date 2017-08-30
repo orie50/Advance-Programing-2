@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/knockout-3.4.2.debug.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <select size=3 data-bind="
+    options: myItems,
+    optionsText: 'name',
+    optionsValue: 'id',
+    optionsAfterRender: setOptionDisable"></select>
+
+    <script type="text/javascript">
+    var vm = {
+        myItems: [
+            { name: 'Item 1', id: 1, disable: ko.observable(false)},
+            { name: 'Item 3', id: 3, disable: ko.observable(false)},
+            { name: 'Item 4', id: 4, disable: ko.observable(false)}
+        ],
+        setOptionDisable: function(option, item) {
+            ko.applyBindingsToNode(option, {disable: item.disable}, item);
+        }
+    };
+    ko.applyBindings(vm);
+    </script>
+</body>
+</html>

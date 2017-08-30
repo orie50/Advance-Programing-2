@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/myScripts/LoadNav.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+    <link href="../Styles/GeneralStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="Navigation" class="Navigation"></div>
+    <div style="margin: 0px 15% 0px 40%">
+        <h1> Login </h1>
+        <h2> Use a local account to login: </h2>
+        <form data-bind="submit: checkUser">
+            User Name:<br />
+            <input id="Name" type="text" name="username" value="" required><br />
+            Password:<br />
+            <input id="Password" type="password" name="password" value="" required><br />
+            <input id="login" class="submitButton" type="submit" value="login" style="width:75px">
+            <br /><button id="Register" onclick="location.href='RegisterPage.html'">Register as a new user</button><br />
+        </form>
+    </div>
+    <script src="../Scripts/myScripts/LoginScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>Single Player</title>
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+    <link href="../Styles/GamesStyle.css" rel="stylesheet" />
+    <script src="../Scripts/myScripts/LoadNav.js"></script>
+</head>
+<body>
+    <div id="Navigation" class="Navigation"></div>
+    <h1> SinglePlayer Game </h1>
+<div class="container" style="margin: 0px 0px 0px 5%">
+    <div class="col-md-4" style="margin-bottom:100px">
+        <table class="menu">
+            <tr>
+                <td> Maze name:</td>
+                <td><input id="Name" type="text" name="Name" value="" required/></td>
+            </tr>
+            <tr>
+                <td>Rows size:</td>
+                <td><input id="Rows" type="text" name="Rows" value="" required/></td>
+            </tr>
+            <tr>
+                <td>Cols size:</td>
+                <td><input id="Cols" type="text" name="Cols" value="" required/></td>
+            </tr>
+            <tr>
+                <td><input id="start" type="button" style="width:120px" value="Start New Game" />
+                <td>
+            </tr>
+            <tr>
+                <td>Search Algorithm:</td>
+                <td>
+                    <select id="Algorithm">
+                        <option value=0>BFS</option>
+                        <option value=1>DFS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input id="solve" type="button" style="width:100px" value="Solve" /></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <div class="loader"></div>
+        <canvas class="maze" id="mazeCanvas" tabindex="1"></canvas>
+    </div>
+</div>
+    <script src="../Scripts/myScripts/jquery.mazeBoard.js"></script>
+    <script src="../Scripts/myScripts/SinglePlayerScript.js"></script>
+</body>
+</html>

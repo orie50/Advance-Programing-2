@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+    <link href="../Styles/GeneralStyle.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/myScripts/LoadNav.js"></script>
+</head>
+<body>
+    <div id="Navigation" class="Navigation"></div>
+    <div style="margin: 0px 15% 0px 40%">
+        <h1> Register </h1>
+        <form data-bind="submit: addUser">
+         User Name:<br />
+         <input id="Name" type="text" name="username" value="" required><br />
+         Password:<br /> <input id="Password" type="password" name="password" value="" required><br />
+         Verify Password:<br /> <input id="VerifyPassword" type="password" name="verify_password" value="" required><br />
+         Email:<br /> <input id="Email" type="email" name="Email" value="" required><br /> 
+        <input class="submitButton" type="submit" value="register" style="width:75px"> 
+        </form>
+    </div>
+    <script src="../Scripts/myScripts/RegisterScript.js"></script>
+</body>
+</html >

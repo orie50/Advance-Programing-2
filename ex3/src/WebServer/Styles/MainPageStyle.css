@@ -1,0 +1,19 @@
+﻿body {
+    background-image: url("../images/MazeGif.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+    text-align: center;
+    color: red;
+    vertical-align: central;
+    font-size: 100px;
+}
+h2 {
+    text-align: center;
+    color: green;
+    font-size: 30px;
+}
+.Navigation {
+    width: 100%;
+}
