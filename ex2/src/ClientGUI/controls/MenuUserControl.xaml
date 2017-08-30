@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="ClientGUI.controls.MenuUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientGUI.controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="135" d:DesignWidth="350">
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="TextBox">
+                <Setter Property="TextBox.Text" Value=""  />
+                <Setter Property="TextBox.Height" Value="30"  />
+                <Setter Property="TextBox.Width" Value="200" />
+                <Setter Property="TextBox.FontSize" Value="15" />
+                <Setter Property="TextBox.TextWrapping" Value="Wrap" />
+                <Setter Property="TextBox.VerticalAlignment" Value="Top" />
+                <Setter Property="TextBox.HorizontalAlignment" Value ="Left"/>
+            </Style>
+            <Style x:Key="TextBlock">
+                <Setter Property="TextBlock.Foreground" Value ="White"/>
+                <Setter Property="TextBlock.FontSize" Value ="15"/>
+                <Setter Property="TextBlock.TextWrapping" Value ="Wrap"/>
+                <Setter Property="TextBlock.Height" Value ="30"/>
+                <Setter Property="TextBlock.Width" Value ="105"/>
+                <Setter Property="TextBlock.VerticalAlignment" Value ="Top"/>
+                <Setter Property="TextBlock.HorizontalAlignment" Value ="Left"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="117*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="MazeName" Style="{StaticResource TextBlock}" Grid.Row="0" Grid.Column="1" Height="25" Margin="5,0,0,0" Text="Maze name:" />
+        <TextBlock x:Name="Rows" Style="{StaticResource TextBlock}" Grid.Row="0" Grid.Column="1" Margin="5,50,0,0" Text="Maze rows:" />
+        <TextBlock x:Name="Cols" Style="{StaticResource TextBlock}" Grid.Row="0" Grid.Column="1" Margin="5,100,0,0" Text="Maze columns:" />
+        <TextBox x:Name="InsertName" Style="{StaticResource TextBox}" Grid.Row="0" Grid.Column="2" Margin="5,0,0,0" Text="{Binding MazeName}"/>
+        <TextBox x:Name="InsertRows" Style="{StaticResource TextBox}" Grid.Row="0" Grid.Column="2" Margin="5,50,0,0" Text="{Binding Rows}"/>
+        <TextBox x:Name="InsertCols" Style="{StaticResource TextBox}" Grid.Row="0" Grid.Column="2" Margin="5,100,0,0" Text="{Binding Cols}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="ClientGUI.view.Games.SinglePlayerGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientGUI.view"
+        xmlns:controls="clr-namespace:ClientGUI.controls"
+        mc:Ignorable="d"
+        Title="{Binding MazeName}" Height="700" Width="1000" KeyDown="Window_KeyDown" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
+    <DockPanel x:Name="Dock" RenderTransformOrigin="1.199,0.815" HorizontalAlignment="Center">
+        <StackPanel Height="100"  DockPanel.Dock="Top" Orientation="Horizontal" >
+            <Button x:Name="SolveMaze" Content="Solve maze" FontSize="22" Width="140" Margin="250,30,50,30" Click="btnSolveMaze_Click"/>
+            <Button x:Name="RestartGame" Content="Restart game" FontSize="22" Width="140" Margin="0,30,50,30" Click="btnRestartGame_Click"/>
+            <Button x:Name="Menu" Content="Main menu" FontSize="22" Width="140" Margin="0,30,250,30" Click="btnMenu_Click"/>
+        </StackPanel>
+        <controls:MazeBoard x:Name="Board" DockPanel.Dock="Bottom" Rows="{Binding Rows}" Cols="{Binding Cols}" Maze="{Binding MazeSrl}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="50,10,50,50"/>
+    </DockPanel>
+</Window>

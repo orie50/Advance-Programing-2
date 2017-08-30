@@ -1,0 +1,27 @@
+﻿<Window x:Class="ClientGUI.view.Menus.SinglePlayerMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientGUI"
+        xmlns:controls="clr-namespace:ClientGUI.controls"
+        mc:Ignorable="d"
+        Title="SinglePlayerMenu" Height="350" Width="350" ResizeMode="CanMinimize" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="55*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Title" Content="Single Player" FontSize="15" Foreground="Gold" Grid.Column="1" HorizontalAlignment="Left" Margin="125,25,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+        <Button x:Name="StartGame" Content="OK" FontSize="15" Grid.Column="1" HorizontalAlignment="Left" Margin="115,270,0,0" VerticalAlignment="Top" Width="100" Height="30" RenderTransformOrigin="0.949,0.353" Click="btnStartGame_Click"/>
+        <Button x:Name="Return" Content="Back" HorizontalAlignment="Left" Margin="5,270,0,0" VerticalAlignment="Top" Width="65" Height="30" Click="btnBack_Click" RenderTransformOrigin="-1,0.7" Grid.ColumnSpan="2"/>
+        <controls:MenuUserControl x:Name="Menu" Margin="0,100,0,80" Grid.ColumnSpan="2"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/ClientGUI;component/view/resources/background maze.jpg"/>
+        </Grid.Background>
+    </Grid>
+</Window>
